@@ -1,0 +1,610 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/app.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/google_maps_flutter_platform_interface/src/types/location.dart', 'packages/google_maps_flutter_platform_interface/src/types/utils/tile_overlay.dart', 'packages/flutter_polyline_points/src/network_util.dart', 'packages/flutter_polyline_points/src/PointLatLng.dart', 'packages/google_maps_flutter/google_maps_flutter.dart', 'packages/http/src/multipart_request.dart'], (function load__packages__front_end__main_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__app$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__google_maps_flutter_platform_interface__src__types__location$46dart, packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart, packages__flutter_polyline_points__src__network_util$46dart, packages__flutter_polyline_points__src__PointLatLng$46dart, packages__google_maps_flutter__google_maps_flutter$46dart, packages__http__src__multipart_request$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const _interceptors = dart_sdk._interceptors;
+  const _internal = dart_sdk._internal;
+  const async = dart_sdk.async;
+  const collection = dart_sdk.collection;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
+  const app = packages__flutter__src__material__app$46dart.src__material__app;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const location = packages__google_maps_flutter_platform_interface__src__types__location$46dart.src__types__location;
+  const marker$ = packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart.src__types__marker;
+  const polyline$ = packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart.src__types__polyline;
+  const camera = packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart.src__types__camera;
+  const flutter_polyline_points = packages__flutter_polyline_points__src__network_util$46dart.flutter_polyline_points;
+  const polyline_result = packages__flutter_polyline_points__src__network_util$46dart.src__utils__polyline_result;
+  const PointLatLng = packages__flutter_polyline_points__src__PointLatLng$46dart.src__PointLatLng;
+  const google_maps_flutter = packages__google_maps_flutter__google_maps_flutter$46dart.google_maps_flutter;
+  const http = packages__http__src__multipart_request$46dart.http;
+  var main = Object.create(dart.library);
+  var $_set = dartx._set;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $add = dartx.add;
+  var $forEach = dartx.forEach;
+  var $values = dartx.values;
+  var $toSet = dartx.toSet;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    LinkedMapOfMarkerId$Marker: () => (T.LinkedMapOfMarkerId$Marker = dart.constFn(_js_helper.LinkedMap$(marker$.MarkerId, marker$.Marker)))(),
+    JSArrayOfLatLng: () => (T.JSArrayOfLatLng = dart.constFn(_interceptors.JSArray$(location.LatLng)))(),
+    LinkedMapOfPolylineId$Polyline: () => (T.LinkedMapOfPolylineId$Polyline = dart.constFn(_js_helper.LinkedMap$(polyline$.PolylineId, polyline$.Polyline)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    JSArrayOfPointLatLng: () => (T.JSArrayOfPointLatLng = dart.constFn(_interceptors.JSArray$(PointLatLng.PointLatLng)))(),
+    PointLatLngTovoid: () => (T.PointLatLngTovoid = dart.constFn(dart.fnType(dart.void, [PointLatLng.PointLatLng])))(),
+    LinkedHashSetOfPolyline: () => (T.LinkedHashSetOfPolyline = dart.constFn(collection.LinkedHashSet$(polyline$.Polyline)))(),
+    IdentityMapOfString$String: () => (T.IdentityMapOfString$String = dart.constFn(_js_helper.IdentityMap$(core.String, core.String)))(),
+    ListOfPointLatLng: () => (T.ListOfPointLatLng = dart.constFn(core.List$(PointLatLng.PointLatLng)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 33,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3], widget_inspector._Location);
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: text.Text.prototype,
+        [Widget__location]: C[1] || CT.C1,
+        [Widget_key]: null,
+        [Text_textHeightBehavior]: null,
+        [Text_textWidthBasis]: null,
+        [Text_semanticsLabel]: null,
+        [Text_maxLines]: null,
+        [Text_textScaleFactor]: null,
+        [Text_overflow]: null,
+        [Text_softWrap]: null,
+        [Text_locale]: null,
+        [Text_textDirection]: null,
+        [Text_textAlign]: null,
+        [Text_strutStyle]: null,
+        [Text_style]: null,
+        [Text_textSpan]: null,
+        [Text_data]: "Maps Sample App"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 15,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 15,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], widget_inspector._Location);
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], widget_inspector._Location);
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 13,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 13,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], widget_inspector._Location);
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 9,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17], widget_inspector._Location);
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: location.LatLng.prototype,
+        [LatLng_longitude]: -122.214,
+        [LatLng_latitude]: 37.772
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22], widget_inspector._Location);
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: text.Text.prototype,
+        [Widget__location]: C[20] || CT.C20,
+        [Widget_key]: null,
+        [Text_textHeightBehavior]: null,
+        [Text_textWidthBasis]: null,
+        [Text_semanticsLabel]: null,
+        [Text_maxLines]: null,
+        [Text_textScaleFactor]: null,
+        [Text_overflow]: null,
+        [Text_softWrap]: null,
+        [Text_locale]: null,
+        [Text_textDirection]: null,
+        [Text_textAlign]: null,
+        [Text_strutStyle]: null,
+        [Text_style]: null,
+        [Text_textSpan]: null,
+        [Text_data]: "Maps Sample App"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 13,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 13,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26], widget_inspector._Location);
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 139,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onMapCreated",
+        [_Location_column]: 15,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "initialCameraPosition",
+        [_Location_column]: 15,
+        [_Location_line]: 145,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "markers",
+        [_Location_column]: 15,
+        [_Location_line]: 149,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "polylines",
+        [_Location_column]: 15,
+        [_Location_line]: 150,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29, C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32], widget_inspector._Location);
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 143,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 11,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 11,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.constList([C[35] || CT.C35, C[36] || CT.C36], widget_inspector._Location);
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[34] || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 138,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 7,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39], widget_inspector._Location);
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 137,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([], widget_inspector._Location);
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 6,
+        [_Location_file]: "file:///C:/Users/OmarAbuRish/Documents/NYUAD%20Hackathon/front-end/front_end/lib/main.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: main.MyApp.prototype,
+        [Widget__location]: C[41] || CT.C41,
+        [Widget_key]: null
+      });
+    }
+  }, false);
+  var C = Array(43).fill(void 0);
+  var I = ["package:front_end/main.dart"];
+  main.MyApp = class MyApp extends framework.StatefulWidget {
+    createState() {
+      return new main._MyAppState.new();
+    }
+  };
+  (main.MyApp.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.MyApp.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.MyApp.prototype;
+  dart.addTypeTests(main.MyApp);
+  dart.addTypeCaches(main.MyApp);
+  dart.setMethodSignature(main.MyApp, () => ({
+    __proto__: dart.getMethods(main.MyApp.__proto__),
+    createState: dart.fnType(main._MyAppState, [])
+  }));
+  dart.setLibraryUri(main.MyApp, I[0]);
+  main.SearchScreen = class SearchScreen extends framework.StatefulWidget {
+    createState() {
+      return new main._SearchScreenState.new();
+    }
+  };
+  (main.SearchScreen.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.SearchScreen.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.SearchScreen.prototype;
+  dart.addTypeTests(main.SearchScreen);
+  dart.addTypeCaches(main.SearchScreen);
+  dart.setMethodSignature(main.SearchScreen, () => ({
+    __proto__: dart.getMethods(main.SearchScreen.__proto__),
+    createState: dart.fnType(framework.State$(main.SearchScreen), [])
+  }));
+  dart.setLibraryUri(main.SearchScreen, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Text_textHeightBehavior = dart.privateName(text, "Text.textHeightBehavior");
+  var Text_textWidthBasis = dart.privateName(text, "Text.textWidthBasis");
+  var Text_semanticsLabel = dart.privateName(text, "Text.semanticsLabel");
+  var Text_maxLines = dart.privateName(text, "Text.maxLines");
+  var Text_textScaleFactor = dart.privateName(text, "Text.textScaleFactor");
+  var Text_overflow = dart.privateName(text, "Text.overflow");
+  var Text_softWrap = dart.privateName(text, "Text.softWrap");
+  var Text_locale = dart.privateName(text, "Text.locale");
+  var Text_textDirection = dart.privateName(text, "Text.textDirection");
+  var Text_textAlign = dart.privateName(text, "Text.textAlign");
+  var Text_strutStyle = dart.privateName(text, "Text.strutStyle");
+  var Text_style = dart.privateName(text, "Text.style");
+  var Text_textSpan = dart.privateName(text, "Text.textSpan");
+  var Text_data = dart.privateName(text, "Text.data");
+  main._SearchScreenState = class _SearchScreenState extends framework.State$(main.SearchScreen) {
+    build(context) {
+      return new app.MaterialApp.new({home: new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: C[0] || CT.C0, backgroundColor: colors.Colors.green._get(700), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), body: new text.Text.new("Hi", {$creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+    }
+  };
+  (main._SearchScreenState.new = function() {
+    main._SearchScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = main._SearchScreenState.prototype;
+  dart.addTypeTests(main._SearchScreenState);
+  dart.addTypeCaches(main._SearchScreenState);
+  dart.setMethodSignature(main._SearchScreenState, () => ({
+    __proto__: dart.getMethods(main._SearchScreenState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(main._SearchScreenState, I[0]);
+  var ___MyAppState_mapController = dart.privateName(main, "_#_MyAppState#mapController");
+  var _center = dart.privateName(main, "_center");
+  var LatLng_longitude = dart.privateName(location, "LatLng.longitude");
+  var LatLng_latitude = dart.privateName(location, "LatLng.latitude");
+  var ___MyAppState_polylinePoints = dart.privateName(main, "_#_MyAppState#polylinePoints");
+  var _onMapCreated = dart.privateName(main, "_onMapCreated");
+  var _createPolylines = dart.privateName(main, "_createPolylines");
+  main._MyAppState = class _MyAppState extends framework.State$(main.MyApp) {
+    get mapController() {
+      let t0;
+      t0 = this[___MyAppState_mapController];
+      return t0 == null ? dart.throw(new _internal.LateError.fieldNI("mapController")) : t0;
+    }
+    set mapController(t0) {
+      this[___MyAppState_mapController] = t0;
+    }
+    get polylinePoints() {
+      let t1;
+      t1 = this[___MyAppState_polylinePoints];
+      return t1 == null ? dart.throw(new _internal.LateError.fieldNI("polylinePoints")) : t1;
+    }
+    set polylinePoints(t1) {
+      this[___MyAppState_polylinePoints] = t1;
+    }
+    [_onMapCreated](controller) {
+      this.mapController = controller;
+      let marker = new marker$.Marker.new({markerId: new marker$.MarkerId.new("place_name"), position: new location.LatLng.new(9.669111, 80.014007), infoWindow: new marker$.InfoWindow.new({title: "title", snippet: "address"})});
+      this.setState(dart.fn(() => {
+        this.markers[$_set](new marker$.MarkerId.new("place_name"), marker);
+      }, T.VoidTovoid()));
+    }
+    [_createPolylines](startLatitude, startLongitude, destinationLatitude, destinationLongitude) {
+      return async.async(dart.dynamic, (function* _createPolylines() {
+        this.polylinePoints = new flutter_polyline_points.PolylinePoints.new();
+        let list1 = T.JSArrayOfPointLatLng().of([new PointLatLng.PointLatLng.new(13.388798, 52.517033), new PointLatLng.PointLatLng.new(13.397631, 52.529432), new PointLatLng.PointLatLng.new(-18.142, 178.431), new PointLatLng.PointLatLng.new(-27.467, 153.027)]);
+        let result = new polyline_result.PolylineResult.new({points: list1});
+        if (result.points[$isNotEmpty]) {
+          result.points[$forEach](dart.fn(point => {
+            this.polylineCoordinates[$add](new location.LatLng.new(point.latitude, point.longitude));
+          }, T.PointLatLngTovoid()));
+        }
+        let id = new polyline$.PolylineId.new("poly");
+        let polyline = new polyline$.Polyline.new({polylineId: id, color: colors.Colors.red, points: this.polylineCoordinates, width: 3});
+        this.polylines[$_set](id, polyline);
+      }).bind(this));
+    }
+    build(context) {
+      this[_createPolylines](9.669111, 80.014007, 9.669111, 80.114007);
+      return new app.MaterialApp.new({home: new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: C[19] || CT.C19, backgroundColor: colors.Colors.green._get(700), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), body: new google_maps_flutter.GoogleMap.new({onMapCreated: dart.bind(this, _onMapCreated), initialCameraPosition: new camera.CameraPosition.new({target: this[_center], zoom: 11.0}), markers: this.markers[$values][$toSet](), polylines: T.LinkedHashSetOfPolyline().of(this.polylines[$values]), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27}), $creationLocationd_0dea112b090073317d4: C[33] || CT.C33}), $creationLocationd_0dea112b090073317d4: C[37] || CT.C37});
+    }
+  };
+  (main._MyAppState.new = function() {
+    this[___MyAppState_mapController] = null;
+    this[_center] = C[18] || CT.C18;
+    this.markers = new (T.LinkedMapOfMarkerId$Marker()).new();
+    this[___MyAppState_polylinePoints] = null;
+    this.polylineCoordinates = T.JSArrayOfLatLng().of([]);
+    this.polylines = new (T.LinkedMapOfPolylineId$Polyline()).new();
+    main._MyAppState.__proto__.new.call(this);
+    ;
+  }).prototype = main._MyAppState.prototype;
+  dart.addTypeTests(main._MyAppState);
+  dart.addTypeCaches(main._MyAppState);
+  dart.setMethodSignature(main._MyAppState, () => ({
+    __proto__: dart.getMethods(main._MyAppState.__proto__),
+    [_onMapCreated]: dart.fnType(dart.void, [google_maps_flutter.GoogleMapController]),
+    [_createPolylines]: dart.fnType(dart.dynamic, [core.double, core.double, core.double, core.double]),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(main._MyAppState, () => ({
+    __proto__: dart.getGetters(main._MyAppState.__proto__),
+    mapController: google_maps_flutter.GoogleMapController,
+    polylinePoints: flutter_polyline_points.PolylinePoints
+  }));
+  dart.setSetterSignature(main._MyAppState, () => ({
+    __proto__: dart.getSetters(main._MyAppState.__proto__),
+    mapController: google_maps_flutter.GoogleMapController,
+    polylinePoints: flutter_polyline_points.PolylinePoints
+  }));
+  dart.setLibraryUri(main._MyAppState, I[0]);
+  dart.setFieldSignature(main._MyAppState, () => ({
+    __proto__: dart.getFields(main._MyAppState.__proto__),
+    [___MyAppState_mapController]: dart.fieldType(dart.nullable(google_maps_flutter.GoogleMapController)),
+    [_center]: dart.finalFieldType(location.LatLng),
+    markers: dart.fieldType(core.Map$(marker$.MarkerId, marker$.Marker)),
+    [___MyAppState_polylinePoints]: dart.fieldType(dart.nullable(flutter_polyline_points.PolylinePoints)),
+    polylineCoordinates: dart.fieldType(core.List$(location.LatLng)),
+    polylines: dart.fieldType(core.Map$(polyline$.PolylineId, polyline$.Polyline))
+  }));
+  main.main = function main$() {
+    return binding.runApp(C[40] || CT.C40);
+  };
+  main.fetchRoute = function fetchRoute() {
+    return async.async(T.ListOfPointLatLng(), function* fetchRoute() {
+      let response = (yield http.get(core.Uri.parse("http://localhost:3000"), {headers: new (T.IdentityMapOfString$String()).from(["Access-Control-Allow-Origin", "*"])}));
+      if (response.statusCode === 200) {
+        core.print(response.body);
+        let s = T.JSArrayOfPointLatLng().of([]);
+        return s;
+      } else {
+        dart.throw(core.Exception.new("Failed to load album"));
+      }
+    });
+  };
+  dart.trackLibraries("packages/front_end/main.dart", {
+    "package:front_end/main.dart": main
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["main.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAW+B;IAAa;;;QAHxB;;AAAQ,8CAAW,GAAG;;EAAC;;;;;;;;;;AAUJ;IAAoB;;;QAHhC;;AAAQ,qDAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAuBtB;AACxB,YAAO,gCACG,mCACM,+DAEkB,AAAK,yBAAC,qEAE1B,kBAAK;IACrB;;;;;EACF;;;;;;;;;;;;;;;;;;AAG2B;;IAAa;;AAAb;IAAa;;;AAOlB;;IAAc;;AAAd;IAAc;oBAQK;AACX,MAA1B,qBAAgB,UAAU;AAEpB,mBAAS,kCACH,yBAAS,yBACT,wBAAO,UAAU,wBAEf,mCACH,kBACE;AAMX,MAFF,cAAS;AACiC,QAAxC,AAAO,oBAAC,yBAAS,eAAiB,MAAM;;IAE5C;uBAKS,eACA,gBACA,qBACA;AAJO;AAOmB,QAAjC,sBAAiB;AAEC,oBAAQ,6BACxB,gCAAY,WAAW,YACvB,gCAAY,WAAW,YACvB,gCAAY,CAAC,QAAQ,UACrB,gCAAY,CAAC,QAAQ;AAER,qBAAS,gDAAuB,KAAK;AAYpD,YAAI,AAAO,AAAO,MAAR;AAGN,UAFF,AAAO,AAAO,MAAR,kBAAgB,QAAa;AAC+B,YAAhE,AAAoB,+BAAI,wBAAO,AAAM,KAAD,WAAW,AAAM,KAAD;;;AAK7C,iBAAK,6BAAW;AAGlB,uBAAW,wCACN,EAAE,SACA,2BACN,iCACD;AAIe,QAAxB,AAAS,sBAAC,EAAE,EAAI,QAAQ;MAC1B;;UAG0B;AACkC,MAA1D,uBAAiB,UAAU,WAAW,UAAU;AAChD,YAAO,gCACC,mCACM,iEAEkB,AAAK,yBAAC,uEAE1B,+DACY,6CACS,uCACb,qBACF,iBAEC,AAAQ,AAAO,4CACb,+BAAiB,AAAU;IAElD;;;wCArGyB;IAEZ;IAES,eAA4B;yCAG9B;IAGP,2BAAsB;IAGT,iBAAY;;;EAyFxC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAnJe;EAAqB;;AAgBA;AAC5B,sBAAW,MAAM,SAAa,eAAM,oCAC7B,2CAAC,+BAA+B;AAE7C,UAAI,AAAS,AAAW,QAAZ,gBAAe;AACL,QAApB,WAAM,AAAS,QAAD;AACI,gBAAI;AACtB,cAAO,EAAC;;AAI+B,QAAvC,WAAM,mBAAU;;IAEpB","file":"../../../../../../../packages/front_end/main.dart.lib.js"}');
+  // Exports:
+  return {
+    main: main
+  };
+}));
+
+//# sourceMappingURL=main.dart.lib.js.map
