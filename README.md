@@ -96,7 +96,11 @@ Quantum Computing Algorithms
 -Outputs optimal order of locations which takes the least time/distance in the form of an ordered array of the numbered nodes.
 
 
-## Team Members 
+## Team Members
+
+![Group Picture](assets/group_picture.jpg)
+
+#### Hackers
 
 - Abdallah Saleh
 - Bhavica Mohta
@@ -106,13 +110,11 @@ Quantum Computing Algorithms
 - Yousra Farhani
 
 
-## Mentors
+#### Mentors
 
 - Shoaib Mohammed
 - Mousa Farajallah
 - David Morcuende
 - Sama Kanbour
 
-## Group
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Team Members](assets/team_members.png)
