@@ -1,7 +1,6 @@
-<p align="center"><img src="https://i.ibb.co/tbPGLJy/Group-2-1.png"></p>
-
-
 # Salem Teslam سلم تسلم
+
+<p align="center"><img src="https://i.ibb.co/tbPGLJy/Group-2-1.png"></p>
 
 Salem Teslam (سلم تسلم) is a mobile application that uses Quantum Computing and google maps API to calculate and output the shortest overall route for multiple deliveries, optimizing delivery time and order. 
 
