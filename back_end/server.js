@@ -1,9 +1,7 @@
 const express = require('express')
 const app = express()
 const fetch = require("node-fetch")
-const fs = require('fs')
 
-        
 require('dotenv').config();
 
 app.use(express.json())
@@ -107,26 +105,6 @@ app.get('/shortest-path', async (req, res) => {
         const points = req.body.points
 
         const graph = await graphData(location , points)
-
-        let content = ""
-
-        for(let i =0; i < graph.length ; i++) {
-            for(let j = 0 ; j < graph[i].length ; j++) {
-                
-                content += graph[i][j]
-                if(j < graph[i].length  - 1) {
-                    content += ','
-                }
-            }
-            content += '\n'
-        }
-
-        fs.writeFileSync("./bracket_input.csv" , content , (err) => {
-            if(err) {
-                console.error(err)
-                return 
-            }
-        })
 
         
         res.send(routesMatrix)
