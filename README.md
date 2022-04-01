@@ -1,4 +1,4 @@
-![Logo](https://i.ibb.co/tbPGLJy/Group-2-1.png)
+<p align="center"><img src="https://i.ibb.co/tbPGLJy/Group-2-1.png"></p>
 
 
 # Salem Teslam سلم تسلم
