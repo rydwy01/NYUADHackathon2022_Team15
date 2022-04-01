@@ -8,8 +8,7 @@ Salem Teslam (سلم تسلم) is a mobile application that uses Quantum Computi
 
 ## Link to Presentation
 
-- https://docs.google.com/presentation/d/1IvcqOcLi9b86j30i0UjKGVizsd7-bF7zIc280YRzTnQ/edit#slide=id.g121001384d4_2_10
-
+Please find the presentation [here](https://drive.google.com/file/d/15L1dQC_L6oQJXzFDT9DVX2MEw8Eqga34/view?usp=sharing).
 
 ## Problem Statement
 
