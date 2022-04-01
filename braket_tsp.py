@@ -12,7 +12,7 @@ from collections import defaultdict
 import itertools
 import pandas as pd
 from utils_tsp import get_distance, traveling_salesperson
-!/usr/bin/env python
+
 coding: utf-8
 
 # ## IMPORTS AND SETUP
@@ -118,3 +118,6 @@ def run_braket_tsp(map_file):
         f.write("optimal route: " + best_route)
         f.write("optimal distance: " + best_distance)
     return "braket_solution.txt"
+
+
+run_braket_tsp("bracket_input.csv")
