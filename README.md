@@ -107,6 +107,7 @@ Quantum Computing Algorithms
 - Omar El Herraoui
 - Omar Aburish
 - Yousra Farhani
+- Ryan Dwyer
 
 
 #### Mentors
